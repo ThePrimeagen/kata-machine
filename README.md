@@ -1,5 +1,5 @@
 ## Lig-Machine
-Long-winded
+Lengthy
 Instrumentation
 Generating
 Massive
