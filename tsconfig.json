@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "allowJs": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "target": "es6",
+        "module": "commonjs",
+        "typeRoots": [
+            "./node_modules/@nf-types",
+            "./node_modules/@types"
+        ],
+        "baseUrl": "src",
+        "paths": {
+            "@code/*": ["day1/*"]
+        }
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
+
+
+
