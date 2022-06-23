@@ -2,7 +2,6 @@
 Long-winded
 Instrumentation
 Generating
-\-
 Massive
 Anticompetitive
 Computational
