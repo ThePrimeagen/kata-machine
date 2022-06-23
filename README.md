@@ -47,5 +47,3 @@ yarn test
 
 I have yet to create a testing strategy for next sets of algorithms, but we
 will get there when i cross that bridge.
-
->>>>>>> feat: ligma sugma
