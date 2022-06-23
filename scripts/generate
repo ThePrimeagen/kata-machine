@@ -55,5 +55,5 @@ config.dsa.forEach(ds => {
 const align = require("./align-configs");
 align.jest(day_name);
 align.ts_config(day_name);
-align.package_json(config, day_name);
+align.package_json(config, day_path);
 

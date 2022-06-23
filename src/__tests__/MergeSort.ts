@@ -1,4 +1,4 @@
-import merge_sort from "@code/merge-sort";
+import merge_sort from "@code/MergeSort";
 
 test("merge-sort", function() {
     const arr = [9, 3, 7, 4, 69, 420, 42];

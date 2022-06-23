@@ -1,9 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 
-module.exports.package_json = function(config) {
+module.exports.package_json = function(config, day_path) {
     const package_json = require("../package.json");
     package_json.scripts.test = `jest ${config.dsa.join(" ")}`;
+    package_json.scripts.day = `echo ${day_path}`;
 
     package_json.kata_stats = config.dsa.reduce((acc, ds) => {
         if (!acc[ds]) {
@@ -12,6 +13,7 @@ module.exports.package_json = function(config) {
         acc[ds]++;
         return acc;
     }, package_json.kata_stats || {});
+
 
     fs.writeFileSync(
         path.join(__dirname, "..", "package.json"),

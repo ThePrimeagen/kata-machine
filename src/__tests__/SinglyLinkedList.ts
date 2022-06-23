@@ -1,4 +1,4 @@
-import LinkedList from "@code/single-linked-list";
+import LinkedList from "@code/SingleLinkedList";
 
 test("linked-list", function() {
     const list = new LinkedList<number>();

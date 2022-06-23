@@ -1,4 +1,4 @@
-import Stack from "@code/stack";
+import Stack from "@code/Stack";
 
 test("queue", function() {
     const list = new Stack<number>();
