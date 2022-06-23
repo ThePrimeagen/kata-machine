@@ -14,7 +14,9 @@
         ],
         "baseUrl": "src",
         "paths": {
-            "@code/*": ["day1/*"]
+            "@code/*": [
+                "day2/*"
+            ]
         }
     },
     "include": [
@@ -24,6 +26,3 @@
         "node_modules"
     ]
 }
-
-
-

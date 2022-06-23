@@ -22,7 +22,8 @@ try {
     day = 1;
 }
 
-const day_path = path.join(src_path, `day${day}`);
+const day_name = `day${day}`;
+const day_path = path.join(src_path, day_name);
 try { fs.unlinkSync(day_path); } catch (e) { }
 try { fs.mkdirSync(day_path); } catch (e) { }
 
@@ -68,3 +69,7 @@ function create_function(item) {
     args: "arr: number[]",
     "return": "void",
 }].forEach(f => create_function(f));
+
+const align = require("./align-configs");
+align.jest(day_name);
+align.ts_config(day_name);
