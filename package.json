@@ -1,18 +1,21 @@
 {
-  "name": "kata",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "@types/jest": "^28.1.3",
-    "jest": "^28.1.1",
-    "ts-jest": "^28.0.5",
-    "ts-node": "^10.8.1",
-    "tsconfig-paths": "^4.0.0",
-    "tsconfig-paths-jest": "^0.0.1",
-    "typescript": "^4.7.4"
-  },
-  "scripts": {
-    "test": "jest"
-  }
+    "name": "kata",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "@types/jest": "^28.1.3",
+        "jest": "^28.1.1",
+        "ts-jest": "^28.0.5",
+        "ts-node": "^10.8.1",
+        "tsconfig-paths": "^4.0.0",
+        "tsconfig-paths-jest": "^0.0.1",
+        "typescript": "^4.7.4"
+    },
+    "scripts": {
+        "test": "jest ArrayList"
+    },
+    "kata_stats": {
+        "ArrayList": 2
+    }
 }

@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
+const config = require("../ligma.config");
+const dsa = require("./dsa");
 
 const src_path = path.join(__dirname, "..", "src");
 let day = 1;
@@ -28,7 +30,7 @@ try { fs.unlinkSync(day_path); } catch (e) { }
 try { fs.mkdirSync(day_path); } catch (e) { }
 
 function create_class(item) {
-    fs.writeFileSync(path.join(day_path, item.name), `export default class ${item.class} {
+    fs.writeFileSync(path.join(day_path, item.name), `export default class ${item.className} {
     constructor() {
 
     }
@@ -41,35 +43,17 @@ function create_function(item) {
 }`);
 }
 
-[{
-    name: "single-linked-list.ts",
-    class: "LinkedList",
-}, {
-    name: "doubly-linked-list.ts",
-    class: "LinkedList",
-}, {
-    name: "array-list.ts",
-    class: "ArrayList",
-}, {
-    name: "queue.ts",
-    class: "Queue",
-}, {
-    name: "stack.ts",
-    class: "Stack",
-}].forEach(c => create_class(c));
-
-[{
-    name: "insertion-sort.ts",
-    fn: "insertion_sort",
-    args: "arr: number[]",
-    "return": "void",
-}, {
-    name: "merge-sort.ts",
-    fn: "merge_sort",
-    args: "arr: number[]",
-    "return": "void",
-}].forEach(f => create_function(f));
+config.dsa.forEach(ds => {
+    const item = dsa[ds];
+    if (item.type === "class") {
+        create_class(item);
+    } else {
+        create_function(item);
+    }
+});
 
 const align = require("./align-configs");
 align.jest(day_name);
 align.ts_config(day_name);
+align.package_json(config, day_name);
+

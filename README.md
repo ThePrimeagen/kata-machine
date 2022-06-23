@@ -1,16 +1,16 @@
 ## Developed live on twitch
 [ThePrimeagen](https://twitch.tv/ThePrimeagen)
 
-## Lig-Machine
-Lengthy
-Instrumentation
-Generating
-Massive
-Anticompetitive
-Computational
-Help for
-Intermediate
-Coders
+## Naming
+### Lig-Machine
+Lengthy Instrumentation Generating Massive Anticompetitive Computational Help for Intermediate Coders // n9
+
+### Ligmata
+Literal Improvement Gaining Master and Tutelage on Algorithms
+Let's Intelligently Generate Multiple Algorithm Training Assessments // permdaddy
+
+### If you have a suggestion
+make an issue and we will come up with the potential name.
 
 ### WARNING
 I have just started to add algorithms, so the number of supported algorithms is
