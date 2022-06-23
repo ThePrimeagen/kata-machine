@@ -5,6 +5,7 @@
         "noImplicitAny": true,
         "strictNullChecks": true,
         "resolveJsonModule": true,
+        "noImplicitReturns": true,
         "esModuleInterop": true,
         "target": "es6",
         "module": "commonjs",
