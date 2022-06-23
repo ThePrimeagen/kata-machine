@@ -1,5 +1,14 @@
 ## Lig-Machine
-The kata machine makes it easy to run katas on specific algorithms.
+Long-winded
+Instrumentation
+Generating
+\-
+Massive
+Anticompetitive
+Computational
+Help for
+Intermediate
+Coders
 
 ### WARNING
 I have just started to add algorithms, so the number of supported algorithms is
