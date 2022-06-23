@@ -29,16 +29,16 @@ const day_path = path.join(src_path, day_name);
 try { fs.unlinkSync(day_path); } catch (e) { }
 try { fs.mkdirSync(day_path); } catch (e) { }
 
-function create_class(item) {
-    fs.writeFileSync(path.join(day_path, item.name), `export default class ${item.className} {
+function create_class(name, item) {
+    fs.writeFileSync(path.join(day_path, `${name}.ts`), `export default class ${name} {
     constructor() {
 
     }
 }`);
 }
 
-function create_function(item) {
-    fs.writeFileSync(path.join(day_path, item.name), `export default function ${item.fn}(${item.args}): ${item.return} {
+function create_function(name, item) {
+    fs.writeFileSync(path.join(day_path, `${name}.ts`), `export default function ${item.fn}(${item.args}): ${item.return} {
 
 }`);
 }
@@ -46,9 +46,9 @@ function create_function(item) {
 config.dsa.forEach(ds => {
     const item = dsa[ds];
     if (item.type === "class") {
-        create_class(item);
+        create_class(ds, item);
     } else {
-        create_function(item);
+        create_function(ds, item);
     }
 });
 

@@ -16,6 +16,6 @@
         "test": "jest ArrayList"
     },
     "kata_stats": {
-        "ArrayList": 2
+        "ArrayList": 4
     }
 }
