@@ -9,14 +9,10 @@
         "esModuleInterop": true,
         "target": "es6",
         "module": "commonjs",
-        "typeRoots": [
-            "./node_modules/@nf-types",
-            "./node_modules/@types"
-        ],
         "baseUrl": "src",
         "paths": {
             "@code/*": [
-                "day10/*"
+                "day3/*"
             ]
         }
     },

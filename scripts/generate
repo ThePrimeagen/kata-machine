@@ -30,7 +30,7 @@ try { fs.unlinkSync(day_path); } catch (e) { }
 try { fs.mkdirSync(day_path); } catch (e) { }
 
 function create_class(name, item) {
-    fs.writeFileSync(path.join(day_path, `${name}.ts`), `export default class ${name} {
+    fs.writeFileSync(path.join(day_path, `${name}.ts`), `export default class ${name}<T> {
     constructor() {
 
     }

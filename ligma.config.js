@@ -1,6 +1,11 @@
 module.exports = {
     dsa: [
-        "ArrayList",
+        "InsertionSort",
+        "MergeSort",
+        "Queue",
+        "Stack",
+        "QuickSort",
+        "DijkstraList",
     ],
 }
 

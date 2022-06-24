@@ -13,13 +13,18 @@
         "typescript": "^4.7.4"
     },
     "scripts": {
-        "test": "jest ArrayList",
+        "test": "jest InsertionSort MergeSort Queue Stack QuickSort DijkstraList",
         "clear": "./scripts/clear",
         "generate": "./scripts/generate",
-        "start": "echo vim /home/mpaulson/personal/kata/src/day9",
-        "day": "echo /home/mpaulson/personal/kata/src/day10"
+        "day": "echo /home/mpaulson/personal/kata/src/day3"
     },
     "kata_stats": {
-        "ArrayList": 8
+        "ArrayList": 0,
+        "DijkstraList": 2,
+        "InsertionSort": 1,
+        "MergeSort": 1,
+        "Queue": 1,
+        "Stack": 1,
+        "QuickSort": 1
     }
 }

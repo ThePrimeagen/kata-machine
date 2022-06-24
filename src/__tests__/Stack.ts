@@ -1,6 +1,6 @@
 import Stack from "@code/Stack";
 
-test("queue", function() {
+test("stack", function() {
     const list = new Stack<number>();
 
     list.push(5);
@@ -16,6 +16,14 @@ test("queue", function() {
     expect(list.peek()).toEqual(5);
     expect(list.pop()).toEqual(5);
     expect(list.pop()).toEqual(undefined);
+
+    // just wanted to make sure that I could not blow up myself when i remove
+    // everything
+    list.push(69);
+    expect(list.peek()).toEqual(69);
+    expect(list.length).toEqual(1);
+
+    //yayaya
 });
 
 
