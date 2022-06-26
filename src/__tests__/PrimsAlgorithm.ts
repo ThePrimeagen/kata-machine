@@ -1,6 +1,6 @@
-import dijkstra_list from "@code/DijkstraList";
+import prims from "@code/PrimsAlgorithm";
 
-test("dijkstra via adj list", function () {
+test("PrimsAlgorithm", function () {
     const list: WeightedAdjacencyList = [];
 
     //      (1) --- (4) ---- (5)
@@ -41,8 +41,29 @@ test("dijkstra via adj list", function () {
         { to: 5, weight: 1 },
     ];
 
-    /// waht?
-    // what..
-    // what...
-    expect(dijkstra_list(0, 6, list)).toEqual([0, 1, 4, 5, 6]);
+    // there is only one right answer for this graph
+    expect(prims(list)).toEqual([
+        [
+            { to: 2, weight: 1 },
+            { to: 1, weight: 3 },
+        ],
+        [
+            { to: 0, weight: 3 },
+            { to: 4, weight: 1 },
+        ],
+        [{ to: 0, weight: 1 }],
+        [{ to: 6, weight: 1 }],
+        [
+            { to: 1, weight: 1 },
+            { to: 5, weight: 2 },
+        ],
+        [
+            { to: 4, weight: 2 },
+            { to: 6, weight: 1 },
+        ],
+        [
+            { to: 5, weight: 1 },
+            { to: 3, weight: 1 },
+        ],
+    ]);
 });

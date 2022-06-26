@@ -1,6 +1,6 @@
 import Queue from "@code/Queue";
 
-test("queue", function() {
+test("queue", function () {
     const list = new Queue<number>();
 
     list.enqueue(5);
@@ -11,7 +11,7 @@ test("queue", function() {
     expect(list.length).toEqual(2);
 
     // this must be wrong..?
-    debugger
+    debugger;
 
     // i hate using debuggers
     list.enqueue(11);
@@ -29,5 +29,3 @@ test("queue", function() {
     expect(list.peek()).toEqual(69);
     expect(list.length).toEqual(1);
 });
-
-

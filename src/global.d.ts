@@ -6,7 +6,8 @@ declare interface List<T> {
     add(item: T): void;
 }
 
-declare type GraphEdge = {to: number, weight: number};
+declare type CompleteGraphEdge = { from: number; to: number; weight: number };
+declare type GraphEdge = { to: number; weight: number };
 declare type WeightedAdjacencyList = GraphEdge[][];
 declare type WeightedAdjacencyMatrix = number[][]; // A number means weight
 
@@ -17,9 +18,9 @@ declare type BinaryNode<T> = {
     value: T;
     left: BinaryNode<T>;
     right: BinaryNode<T>;
-}
+};
 
 declare type GeneralNode<T> = {
     value: T;
-    children: GeneralNode<T>[]
-}
+    children: GeneralNode<T>[];
+};

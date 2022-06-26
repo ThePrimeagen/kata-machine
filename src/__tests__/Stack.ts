@@ -1,6 +1,6 @@
 import Stack from "@code/Stack";
 
-test("stack", function() {
+test("stack", function () {
     const list = new Stack<number>();
 
     list.push(5);
@@ -25,6 +25,3 @@ test("stack", function() {
 
     //yayaya
 });
-
-
-

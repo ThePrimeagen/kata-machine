@@ -6,6 +6,7 @@
     "dependencies": {
         "@types/jest": "^28.1.3",
         "jest": "^28.1.1",
+        "prettier": "^2.7.1",
         "ts-jest": "^28.0.5",
         "ts-node": "^10.8.1",
         "tsconfig-paths": "^4.0.0",
@@ -15,16 +16,17 @@
     "scripts": {
         "test": "jest InsertionSort MergeSort Queue Stack QuickSort DijkstraList",
         "clear": "./scripts/clear",
+        "prettier": "prettier --write ./src",
         "generate": "./scripts/generate",
-        "day": "echo /home/mpaulson/personal/kata/src/day3"
+        "day": "echo /home/mpaulson/personal/kata/src/day5"
     },
     "kata_stats": {
         "ArrayList": 0,
-        "DijkstraList": 2,
-        "InsertionSort": 1,
-        "MergeSort": 1,
-        "Queue": 1,
-        "Stack": 1,
-        "QuickSort": 1
+        "DijkstraList": 4,
+        "InsertionSort": 3,
+        "MergeSort": 3,
+        "Queue": 3,
+        "Stack": 3,
+        "QuickSort": 3
     }
 }

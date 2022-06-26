@@ -10,7 +10,7 @@ Literal Improvement Gaining Master and Tutelage on Algorithms
 Let's Intelligently Generate Multiple Algorithm Training Assessments // permdaddy
 
 ### Sugma Nuts
-Studious Users Get Major Abilities. New Useful Training for Students 
+Studious Users Get Major Abilities. New Useful Training for Students
 
 ### Ligma Fart 
 Learn Intermediate Groundbreaking Massive Algorithms. Free Algorithm Research & Training System
