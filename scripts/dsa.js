@@ -43,5 +43,12 @@ module.exports = {
         args: "source: number, sink: number, arr: WeightedAdjacencyList",
         "return": "number[]",
     },
+
+    PrimsList: {
+        type: "fn",
+        fn: "prims",
+        args: "list: WeightedAdjacencyList",
+        "return": ": WeightedAdjacencyList | null",
+    },
 };
 

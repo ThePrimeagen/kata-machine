@@ -12,7 +12,7 @@ Let's Intelligently Generate Multiple Algorithm Training Assessments // permdadd
 ### Sugma Nuts
 Studious Users Get Major Abilities. New Useful Training for Students
 
-### Ligma Fart 
+### Ligma Fart
 Learn Intermediate Groundbreaking Massive Algorithms. Free Algorithm Research & Training System
 
 
@@ -26,24 +26,44 @@ limited at the moment, but will grow fairly quick.
 ### Supported Algorithm
 * Insertion sort
 * Merge sort
+* QuickSort
+* Prim's MST (Adjacency List)
+* Dijkstra's Shortest Path (Adjacency List)
 
 ### Supported Data Structures
 * Singly linked list
 * Doubly linked list
 * Queue
 * Stack
+* Graph with Adjacency List
+* Graph with Adjacency Matrix (untested)
 
 ### How It Works
 
-install the dependencies
+clone the repo and install the dependencies
 
 ```bash
 yarn install
 ```
 
-create day 1
+edit the `ligma.config.js` file
+```javascript
+module.exports = {
+    dsa: [
+        "InsertionSort",
+        "MergeSort",
+        "Queue",
+        "Stack",
+        "QuickSort",
+        "DijkstraList",
+        "PrimsList",
+    ],
+}
+```
+
+create a day of katas, this will use the list in the `ligma.config.js`.
 ```bash
-./scripts/v1
+yarn generate
 ```
 
 this will progressively create folders named
@@ -54,7 +74,7 @@ src/day2
 ...
 ```
 
-`scripts/v1` will also update the `tsconfig.json` and `jest.config` to point
+`yarn generate` will also update the `tsconfig.json` and `jest.config` to point
 the latest `day` folder via tspaths.  This allows us to avoid updating anything
 for testing each day.
 
