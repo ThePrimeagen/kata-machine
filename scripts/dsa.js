@@ -1,11 +1,41 @@
 
 module.exports = {
+    RingBuffer: {
+        generic: "<T>",
+        type: "class",
+        methods: [{
+            name: "push",
+            args: "item: T",
+            return: "void",
+        }, {
+            name: "get",
+            args: "idx: number",
+            return: "T | undefined",
+        }, {
+            name: "pop",
+            return: "T | undefined",
+        }],
+        getters: [{
+            name: "length",
+            return: "number",
+            prop_name: "_length",
+        }],
+        properties: [{
+            name: "_length",
+            type: "number",
+            scope: "private",
+        }]
+    },
     ArrayList: {
         type: "class",
+        generic: "<T>",
         methods: [{
             name: "add",
             args: "item: T",
             return: "void",
+        }, {
+            name: "peek",
+            return: "T | undefined",
         }, {
             name: "remove",
             args: "item: T",
@@ -27,15 +57,19 @@ module.exports = {
         }]
     },
     SinglyLinkedList: {
+        generic: "<T>",
         type: "class",
     },
     DoublyLinkedList: {
+        generic: "<T>",
         type: "class",
     },
     Queue: {
+        generic: "<T>",
         type: "class",
     },
     Stack: {
+        generic: "<T>",
         type: "class",
     },
 
