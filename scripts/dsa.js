@@ -2,6 +2,29 @@
 module.exports = {
     ArrayList: {
         type: "class",
+        methods: [{
+            name: "add",
+            args: "item: T",
+            return: "void",
+        }, {
+            name: "remove",
+            args: "item: T",
+            return: "T | undefined",
+        }, {
+            name: "removeAt",
+            args: "idx: number",
+            return: "T | undefined",
+        }],
+        getters: [{
+            name: "length",
+            return: "number",
+            prop_name: "_length",
+        }],
+        properties: [{
+            name: "_length",
+            type: "number",
+            scope: "private",
+        }]
     },
     SinglyLinkedList: {
         type: "class",

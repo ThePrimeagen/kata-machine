@@ -29,11 +29,32 @@ const day_path = path.join(src_path, day_name);
 try { fs.unlinkSync(day_path); } catch (e) { }
 try { fs.mkdirSync(day_path); } catch (e) { }
 
+function generate_method(method) {
+    return `${method.name}(${method.args}): ${method.return || "void"} {
+
+}`;
+}
+
+function generate_property(prop) {
+    return `${prop.scope} ${prop.name}: ${prop.type};`
+}
+
+function generate_getter(getter) {
+    return `${getter.name}(): ${getter.return} {
+    return this.${getter.prop_name};
+}`
+}
+
 function create_class(name, item) {
     fs.writeFileSync(path.join(day_path, `${name}.ts`), `export default class ${name}<T> {
-    constructor() {
+    ${(item.properties || []).map(generate_property).join("\n    ")}
 
+    ${(item.getters || []).map(generate_getter).join("\n    ")}
+
+    constructor() {
     }
+
+    ${(item.methods || []).map(generate_method).join("\n    ")}
 }`);
 }
 
