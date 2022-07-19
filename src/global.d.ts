@@ -1,3 +1,8 @@
+declare type Point = {
+    x: number;
+    y: number;
+}
+
 declare interface List<T> {
     get length(): number;
     removeAt(index: number): T | undefined;
