@@ -16,8 +16,7 @@ module.exports = {
         "BTBFS",
         "CompareBinaryTrees",
         "DFSOnBST",
-        // TODO:
-        // Red Black Tree
+        "Trie",
         "DFSGraphList",
         "BFSGraphList",
         "BFSGraphMatrix",

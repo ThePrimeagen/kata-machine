@@ -140,6 +140,23 @@ module.exports = {
         }]
     },
 
+    Trie: {
+        type: "class",
+        methods: [{
+            name: "insert",
+            args: "item: string",
+            return: "void",
+        }, {
+            name: "delete",
+            args: "item: string",
+            return: "void",
+        }, {
+            name: "find",
+            args: "partial: string",
+            return: "string[]",
+        }]
+    },
+
     BubbleSort: {
         type: "fn",
         fn: "bubble_sort",
@@ -206,40 +223,36 @@ module.exports = {
     MazeSolver: {
         type: "fn",
         fn: "solve",
-        args: "maze: string[][], wall: string, path: string, start: Point, end: Point",
+        args: "maze: string[], wall: string, path: string, start: Point, end: Point",
         "return": ": Point[]",
     },
 
     BTPreOrder: {
         type: "fn",
         fn: "pre_order_search",
-        generic: "<T>",
-        args: "head: BinaryNode<T>",
-        "return": ": BinaryNode<T>[]",
+        args: "head: BinaryNode<number>",
+        "return": ": number[]",
     },
 
     BTInOrder: {
         type: "fn",
         fn: "in_order_search",
-        generic: "<T>",
-        args: "head: BinaryNode<T>",
-        "return": ": BinaryNode<T>[]",
+        args: "head: BinaryNode<number>",
+        "return": ": number[]",
     },
 
     BTPostOrder: {
         type: "fn",
         fn: "post_order_search",
-        generic: "<T>",
-        args: "head: BinaryNode<T>",
-        "return": ": BinaryNode<T>[]",
+        args: "head: BinaryNode<number>",
+        "return": ": number[]",
     },
 
     BTBFS: {
         type: "fn",
         fn: "bfs",
-        generic: "<T>",
-        args: "head: BinaryNode<T>",
-        "return": ": BinaryNode<T>[]",
+        args: "head: BinaryNode<number>",
+        "return": ": number[]",
     },
 
     CompareBinaryTrees: {

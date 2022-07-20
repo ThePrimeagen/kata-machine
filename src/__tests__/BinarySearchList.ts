@@ -1,4 +1,4 @@
-import binary_fn from "@code/binary_search_array"
+import binary_fn from "@code/BinarySearchList"
 
 test("binary search array", function() {
 
