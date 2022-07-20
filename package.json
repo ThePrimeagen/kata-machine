@@ -19,15 +19,5 @@
         "prettier": "prettier --write ./src",
         "generate": "./scripts/generate",
         "day": "echo /home/mpaulson/personal/kata/src/day9"
-    },
-    "kata_stats": {
-        "ArrayList": 3,
-        "DijkstraList": 5,
-        "InsertionSort": 4,
-        "MergeSort": 4,
-        "Queue": 4,
-        "Stack": 4,
-        "QuickSort": 4,
-        "PrimsList": 1
     }
 }
