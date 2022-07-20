@@ -41,7 +41,7 @@ const list_interface = {
 
 module.exports = {
     Map: {
-        generic: "<T, V>",
+        generic: "<T extends (string | number), V>",
         type: "class",
         methods: [{
             name: "get",
@@ -258,7 +258,7 @@ module.exports = {
     CompareBinaryTrees: {
         type: "fn",
         fn: "compare",
-        args: "head: BinaryNode<number>",
+        args: "a: BinaryNode<number>, b: BinaryNode<number>",
         "return": ": boolean",
     },
 
@@ -273,21 +273,21 @@ module.exports = {
         type: "fn",
         fn: "dfs",
         args: "graph: WeightedAdjacencyList, source: number, needle: number",
-        "return": "number[]",
+        "return": "number[] | null",
     },
 
     BFSGraphList: {
         type: "fn",
         fn: "bfs",
         args: "graph: WeightedAdjacencyList, source: number, needle: number",
-        "return": "number[]",
+        "return": "number[] | null",
     },
 
     BFSGraphMatrix: {
         type: "fn",
         fn: "bfs",
         args: "graph: WeightedAdjacencyMatrix, source: number, needle: number",
-        "return": "number[]",
+        "return": "number[] | null",
     },
 };
 
