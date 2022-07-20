@@ -40,7 +40,7 @@ function generate_property(prop) {
 }
 
 function generate_getter(getter) {
-    return `${getter.name}(): ${getter.return} {
+    return `get ${getter.name}(): ${getter.return} {
     return this.${getter.prop_name};
 }`
 }
