@@ -196,98 +196,98 @@ module.exports = {
         type: "fn",
         fn: "prims",
         args: "list: WeightedAdjacencyList",
-        "return": ": WeightedAdjacencyList | null",
+        return: "WeightedAdjacencyList | null",
     },
 
     BinarySearchList: {
         type: "fn",
         fn: "bs_list",
         args: "haystack: number[], needle: number",
-        "return": ": boolean",
+        return: "boolean",
     },
 
     LinearSearchList: {
         type: "fn",
         fn: "linear_search",
         args: "haystack: number[], needle: number",
-        "return": ": boolean",
+        return: "boolean",
     },
 
     TwoCrystalBalls: {
         type: "fn",
         fn: "two_crystal_balls",
         args: "breaks: boolean[]",
-        "return": ": number",
+        return: "number",
     },
 
     MazeSolver: {
         type: "fn",
         fn: "solve",
         args: "maze: string[], wall: string, path: string, start: Point, end: Point",
-        "return": ": Point[]",
+        return: "Point[]",
     },
 
     BTPreOrder: {
         type: "fn",
         fn: "pre_order_search",
         args: "head: BinaryNode<number>",
-        "return": ": number[]",
+        return: "number[]",
     },
 
     BTInOrder: {
         type: "fn",
         fn: "in_order_search",
         args: "head: BinaryNode<number>",
-        "return": ": number[]",
+        return: "number[]",
     },
 
     BTPostOrder: {
         type: "fn",
         fn: "post_order_search",
         args: "head: BinaryNode<number>",
-        "return": ": number[]",
+        return: "number[]",
     },
 
     BTBFS: {
         type: "fn",
         fn: "bfs",
         args: "head: BinaryNode<number>",
-        "return": ": number[]",
+        return: "number[]",
     },
 
     CompareBinaryTrees: {
         type: "fn",
         fn: "compare",
         args: "a: BinaryNode<number>, b: BinaryNode<number>",
-        "return": ": boolean",
+        return: "boolean",
     },
 
     DFSOnBST: {
         type: "fn",
         fn: "search",
         args: "head: BinaryNode<number>, needle: number",
-        "return": ": boolean",
+        return: "boolean",
     },
 
     DFSGraphList: {
         type: "fn",
         fn: "dfs",
         args: "graph: WeightedAdjacencyList, source: number, needle: number",
-        "return": "number[] | null",
+        return: "number[] | null",
     },
 
     BFSGraphList: {
         type: "fn",
         fn: "bfs",
         args: "graph: WeightedAdjacencyList, source: number, needle: number",
-        "return": "number[] | null",
+        return: "number[] | null",
     },
 
     BFSGraphMatrix: {
         type: "fn",
         fn: "bfs",
         args: "graph: WeightedAdjacencyMatrix, source: number, needle: number",
-        "return": "number[] | null",
+        return: "number[] | null",
     },
 };
 
