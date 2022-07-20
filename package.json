@@ -14,10 +14,10 @@
         "typescript": "^4.7.4"
     },
     "scripts": {
-        "test": "jest ArrayList",
+        "test": "jest LinearSearchList BinarySearchList TwoCrystalBalls BubbleSort DoublyLinkedList Queue Stack ArrayList MazeSolver QuickSort BTPreOrder BTInOrder BTPostOrder BTBFS CompareBinaryTrees DFSOnBST Trie DFSGraphList BFSGraphList BFSGraphMatrix Map",
         "clear": "./scripts/clear",
         "prettier": "prettier --write ./src",
         "generate": "./scripts/generate",
-        "day": "echo /home/mpaulson/personal/kata/src/day9"
+        "day": "echo /home/mpaulson/personal/kata/src/day1"
     }
 }

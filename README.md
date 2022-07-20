@@ -85,3 +85,8 @@ yarn test
 
 I have yet to create a testing strategy for next sets of algorithms, but we
 will get there when i cross that bridge.
+
+### Help wanted
+A simple way to specify test, thinking something like `tests.json` and `cat
+test.json 2> /dev/null` to specify the tests to run.  tests.json wouldn't be
+committed.
