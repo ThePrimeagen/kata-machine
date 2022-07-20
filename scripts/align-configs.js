@@ -19,7 +19,7 @@ module.exports.stats = function(config, day_path) {
 
     fs.writeFileSync(
         path.join(__dirname, "..", "stats.json"),
-        JSON.stringify(package_json, null, 4));
+        JSON.stringify(stats, null, 4));
 }
 
 module.exports.package_json = function(config, day_path) {
