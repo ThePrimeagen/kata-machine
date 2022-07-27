@@ -251,14 +251,14 @@ module.exports = {
     BTBFS: {
         type: "fn",
         fn: "bfs",
-        args: "head: BinaryNode<number>",
-        return: "number[]",
+        args: "head: BinaryNode<number>, needle: number",
+        return: "boolean",
     },
 
     CompareBinaryTrees: {
         type: "fn",
         fn: "compare",
-        args: "a: BinaryNode<number>, b: BinaryNode<number>",
+        args: "a: BinaryNode<number> | null, b: BinaryNode<number> | null",
         return: "boolean",
     },
 

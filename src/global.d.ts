@@ -8,7 +8,9 @@ declare interface List<T> {
     removeAt(index: number): T | undefined;
     remove(item: T): T | undefined;
     get(index: number): T | undefined;
-    add(item: T): void;
+    prepend(item: T): void;
+    append(item: T): void;
+    insertAt(item: T, idx: number): void;
 }
 
 declare type CompleteGraphEdge = { from: number; to: number; weight: number };
