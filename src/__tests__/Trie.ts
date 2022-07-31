@@ -13,7 +13,7 @@ test("Trie", function() {
         "foolish",
     ]);
 
-    trie.remove("fool");
+    trie.delete("fool");
 
     expect(trie.find("fo").sort()).toEqual([
         "foo",

@@ -67,6 +67,9 @@ function create_function(name, item) {
 
 config.dsa.forEach(ds => {
     const item = dsa[ds];
+    if (!item) {
+        throw new Error(`algorithm ${ds} could not be found`);
+    }
     if (item.type === "class") {
         create_class(ds, item);
     } else {

@@ -223,7 +223,7 @@ module.exports = {
     MazeSolver: {
         type: "fn",
         fn: "solve",
-        args: "maze: string[], wall: string, path: string, start: Point, end: Point",
+        args: "maze: string[], wall: string, start: Point, end: Point",
         return: "Point[]",
     },
 
@@ -264,7 +264,7 @@ module.exports = {
 
     DFSOnBST: {
         type: "fn",
-        fn: "search",
+        fn: "dfs",
         args: "head: BinaryNode<number>, needle: number",
         return: "boolean",
     },

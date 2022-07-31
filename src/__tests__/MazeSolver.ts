@@ -11,7 +11,7 @@ test("maze solver", function () {
     ];
 
     // there is only one path through
-    expect(maze_solver(maze, "x", " ", {x: 10, y: 0}, {x: 1, y: 5})).toEqual([
+    expect(maze_solver(maze, "x", {x: 10, y: 0}, {x: 1, y: 5})).toEqual([
         {x: 10, y: 0},
         {x: 10, y: 1},
         {x: 10, y: 2},
