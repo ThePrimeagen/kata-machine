@@ -1,13 +1,8 @@
 const length_property = {
-    getters: [{
-        name: "length",
-        return: "number",
-        prop_name: "_length",
-    }],
     properties: [{
-        name: "_length",
+        name: "length",
         type: "number",
-        scope: "private",
+        scope: "public",
     }]
 };
 const list_interface = {
@@ -40,6 +35,24 @@ const list_interface = {
 };
 
 module.exports = {
+    MinHeap: {
+        type: "class",
+        methods: [{
+            name: "push",
+            args: "value: number",
+            return: "void",
+        }, {
+            name: "delete",
+            args: "",
+            return: "number",
+        }],
+        properties: [{
+            name: "length",
+            type: "number",
+            scope: "public",
+        }]
+    },
+
     Map: {
         generic: "<T extends (string | number), V>",
         type: "class",
@@ -76,15 +89,10 @@ module.exports = {
             name: "pop",
             return: "T | undefined",
         }],
-        getters: [{
-            name: "length",
-            return: "number",
-            prop_name: "_length",
-        }],
         properties: [{
-            name: "_length",
+            name: "length",
             type: "number",
-            scope: "private",
+            scope: "public",
         }]
     },
 
