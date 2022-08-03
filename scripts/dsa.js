@@ -38,7 +38,7 @@ module.exports = {
     MinHeap: {
         type: "class",
         methods: [{
-            name: "push",
+            name: "insert",
             args: "value: number",
             return: "void",
         }, {
