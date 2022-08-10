@@ -35,6 +35,24 @@ const list_interface = {
 };
 
 module.exports = {
+    LRU: {
+        generic: "<K, V>",
+        type: "class",
+        methods: [{
+            name: "update",
+            args: "key: K, value: V",
+            return: "void",
+        }, {
+            name: "get",
+            args: "key: K",
+            return: "V | undefined",
+        }],
+        properties: [{
+            name: "length",
+            type: "number",
+            scope: "public",
+        }]
+    },
     MinHeap: {
         type: "class",
         methods: [{
