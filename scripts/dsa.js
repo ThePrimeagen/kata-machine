@@ -50,7 +50,7 @@ module.exports = {
         properties: [{
             name: "length",
             type: "number",
-            scope: "public",
+            scope: "private",
         }]
     },
     MinHeap: {
