@@ -3,6 +3,12 @@ declare type Point = {
     y: number;
 }
 
+declare type ListNode<T> = {
+    value: T,
+    next?: ListNode<T>,
+    prev?: ListNode<T>,
+}
+
 declare interface List<T> {
     get length(): number;
     removeAt(index: number): T | undefined;

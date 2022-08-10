@@ -9,11 +9,9 @@ test("LRU", function () {
 
     lru.update("bar", 420);
     expect(lru.get("bar")).toEqual(420);
-    expect(lru.get("foo")).toEqual(69);
 
     lru.update("baz", 1337);
     expect(lru.get("baz")).toEqual(1337);
-    expect(lru.get("foo")).toEqual(69);
 
     lru.update("ball", 69420);
     expect(lru.get("ball")).toEqual(69420);
