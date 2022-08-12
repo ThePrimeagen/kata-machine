@@ -18,6 +18,6 @@
         "clear": "./scripts/clear",
         "prettier": "prettier --write ./src",
         "generate": "./scripts/generate",
-        "day": "echo /home/mpaulson/personal/lig-machine/src/day4"
+        "day": "echo /home/mpaulson/personal/kata-machine/src/day1"
     }
 }

@@ -19,8 +19,6 @@ try {
         day = 1;
     }
 } catch (e) {
-    console.log("error", e.message);
-    console.log("day is 1");
     day = 1;
 }
 
