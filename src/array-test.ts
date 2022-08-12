@@ -33,7 +33,7 @@ function pop(number: number) {
 
 function get(idx: number) {
     return function() {
-        a[idx];
+        return a[idx];
     };
 }
 
