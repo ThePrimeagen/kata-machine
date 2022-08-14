@@ -1,5 +1,6 @@
 module.exports = {
     dsa: [
+        "DFSOnBST",
         "LRU",
         "LinearSearchList",
         "BinarySearchList",
