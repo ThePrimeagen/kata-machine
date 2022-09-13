@@ -42,6 +42,8 @@ OUT OF DATE.  We have quite a few more.  need to update
 
 ### How It Works
 
+Make you have [Node.js](https://nodejs.org/en/) and yarn installed: `npm install --global yarn`
+
 clone the repo and install the dependencies
 
 ```bash
