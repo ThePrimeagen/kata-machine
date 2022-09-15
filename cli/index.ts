@@ -31,7 +31,7 @@ const clone_and_npm_install = async (s: Ora) => {
     } catch (err) {}
 
     return new Promise((resolve, reject) => {
-        const npm_install_process = spawn("npm", ["i"]);
+        const npm_install_process = exec("npm i");
         npm_install_process.on("spawn", () => {
             s.text = "Installing npm modules";
             s.start();
@@ -151,7 +151,7 @@ inquirer
             },
         );
 
-        exec(GENERATE_SCRIPT, (err) => {
+        exec(`node ${GENERATE_SCRIPT}`, (err) => {
             if (err) {
                 console.error(err.message);
                 return;
