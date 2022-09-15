@@ -1,16 +1,24 @@
 #! /usr/bin/env node
 
 import fs from "fs";
+import path from "path";
 import inquirer from "inquirer";
 import { exec, spawn } from "child_process";
 import ora from "ora";
 import degit from "degit";
 
+const IS_WINDOWS = process.platform === "win32";
 const INSTALL_DIR = "kata";
+const GENERATE_SCRIPT = path.join("scripts", "generate");
 
 const check_first_time = () => {
     // return false if cwd is kata
-    if (process.cwd().split("/").slice(-1)[0] === INSTALL_DIR) {
+    if (
+        process
+            .cwd()
+            .split(IS_WINDOWS ? "\\" : "/") // Use \\ in Windows
+            .slice(-1)[0] === INSTALL_DIR
+    ) {
         return false;
     }
     return !fs.existsSync(`./${INSTALL_DIR}`);
@@ -23,7 +31,7 @@ if (is_first_time) {
     emitter.clone(INSTALL_DIR);
     // The user doesn't need the CLI dir
     try {
-        fs.rmdirSync(`./${INSTALL_DIR}/cli`);
+        fs.rmdirSync(path.join(INSTALL_DIR, "cli"));
     } catch (_err) {}
 }
 
@@ -119,7 +127,7 @@ inquirer
         const spinner = ora();
 
         if (is_first_time) {
-            process.chdir(`./${INSTALL_DIR}`);
+            process.chdir(INSTALL_DIR);
 
             const npm_install_process = spawn("npm", ["i"]);
             npm_install_process.on("spawn", () => {
@@ -134,7 +142,7 @@ inquirer
         }
 
         fs.writeFile(
-            "./ligma.config.json",
+            path.join(".", "ligma.config.json"),
             JSON.stringify(answers, null, 2),
             "utf8",
             (err) => {
@@ -145,7 +153,7 @@ inquirer
             },
         );
 
-        exec("./scripts/generate", (err) => {
+        exec(GENERATE_SCRIPT, (err) => {
             if (err) {
                 console.error(err.message);
                 return;
