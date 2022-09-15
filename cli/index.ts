@@ -40,7 +40,7 @@ const clone_and_npm_install = async (s: Ora) => {
             s.succeed();
             resolve(true);
         });
-        npm_install_process.on('error', reject)
+        npm_install_process.on("error", reject);
     });
 };
 
