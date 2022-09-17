@@ -12,7 +12,7 @@ Let's Intelligently Generate Multiple Algorithm Training Assessments // permdadd
 ### Sugma Nuts
 Studious Users Get Major Abilities. New Useful Training for Students
 
-### Ligma Fart
+### Ligma Farts
 Learn Intermediate Groundbreaking Massive Algorithms. Free Algorithm Research & Training System
 
 
