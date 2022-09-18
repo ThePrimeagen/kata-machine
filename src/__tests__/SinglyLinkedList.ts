@@ -1,7 +1,7 @@
-import LinkedList from "@code/SingleLinkedList";
+import SinglyLinkedList from "@code/SinglyLinkedList";
 import { test_list } from "./ListTest";
 
 test("linked-list", function () {
-    const list = new LinkedList<number>(3);
+    const list = new SinglyLinkedList<number>();
     test_list(list);
 });
