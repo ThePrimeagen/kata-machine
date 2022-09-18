@@ -15,9 +15,9 @@
     },
     "scripts": {
         "test": "jest DFSOnBST LRU LinearSearchList BinarySearchList TwoCrystalBalls BubbleSort DoublyLinkedList Queue Stack ArrayList MazeSolver QuickSort BTPreOrder BTInOrder BTPostOrder BTBFS CompareBinaryTrees DFSOnBST DFSGraphList Trie BFSGraphMatrix Map MinHeap",
-        "clear": "node ./scripts/clear",
+        "clear": "node ./scripts/clear.js",
         "prettier": "prettier --write ./src",
-        "generate": "node ./scripts/generate",
+        "generate": "node ./scripts/generate.js",
         "day": "echo C:\\Users\\bruce\\learning\\kata-machine\\src\\day1"
     }
 }
