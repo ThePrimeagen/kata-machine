@@ -18,6 +18,6 @@
         "clear": "node ./scripts/clear.js",
         "prettier": "prettier --write ./src",
         "generate": "node ./scripts/generate.js",
-        "day": "echo C:\\Users\\bruce\\learning\\kata-machine\\src\\day1"
+        "day": "echo src\\day2"
     }
 }

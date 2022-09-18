@@ -23,6 +23,7 @@ try {
 
 const day_name = `day${day}`;
 const day_path = path.join(src_path, day_name);
+const relative_day_path = path.relative(process.cwd(), day_path);
 try { fs.unlinkSync(day_path); } catch (e) { }
 try { fs.mkdirSync(day_path); } catch (e) { }
 
@@ -77,6 +78,6 @@ config.dsa.forEach(ds => {
 const align = require("./align-configs");
 align.jest(day_name);
 align.ts_config(day_name);
-align.package_json(config, day_path);
+align.package_json(config, relative_day_path);
 align.stats(config, day_path);
 
