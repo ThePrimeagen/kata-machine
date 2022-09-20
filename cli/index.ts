@@ -8,7 +8,7 @@ import ora, { Ora } from "ora";
 import degit from "degit";
 
 const INSTALL_DIR = "kata";
-const GENERATE_SCRIPT = path.join("scripts", "generate");
+const GENERATE_SCRIPT = path.join("scripts", "generate.js");
 
 const check_first_time = () => {
     // return false if cwd is kata
@@ -52,6 +52,9 @@ inquirer
             name: "dsa",
             choices: [
                 new inquirer.Separator(" = Data Structures = "),
+                {
+                    name: "SinglyLinkedList",
+                },
                 {
                     name: "DoublyLinkedList",
                 },
