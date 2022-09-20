@@ -18,7 +18,7 @@ Let's Intelligently Generate Multiple Algorithm Training Assessments // permdadd
 ### Sugma Nuts
 Studious Users Get Major Abilities. New Useful Training for Students
 
-### Ligma Fart
+### Ligma Farts
 Learn Intermediate Groundbreaking Massive Algorithms. Free Algorithm Research & Training System
 
 
@@ -48,7 +48,7 @@ OUT OF DATE.  We have quite a few more.  need to update
 
 ### How It Works
 
-Make you have [Node.js](https://nodejs.org/en/) and yarn installed: `npm install --global yarn`
+Make sure you have [Node.js](https://nodejs.org/en/) and yarn installed: `npm install --global yarn`
 
 clone the repo and install the dependencies
 
