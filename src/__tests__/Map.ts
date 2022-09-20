@@ -11,15 +11,15 @@ test("Map", function() {
     map.set("bar", 69);
     expect(map.size()).toEqual(4);
 
-    console.log(map.size());
 
     expect(map.get("bar")).toEqual(69);
     expect(map.get("blaz")).toEqual(undefined);
 
-    map.delete("bar")
+    map.delete("barblabr");
+    expect(map.size()).toEqual(4);
+
+    map.delete("bar");
     expect(map.size()).toEqual(3);
-    map.delete("barblabr")
-    expect(map.size()).toEqual(2);
     expect(map.get("bar")).toEqual(undefined);
 });
 
