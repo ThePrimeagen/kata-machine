@@ -9,6 +9,8 @@ export function test_list(list: List<number>): void {
 
     list.append(11);
     expect(list.removeAt(1)).toEqual(9);
+    console.log("removeAt1", list.getVals());
+
     expect(list.remove(9)).toEqual(undefined);
     expect(list.removeAt(0)).toEqual(5);
     expect(list.removeAt(0)).toEqual(11);
@@ -19,6 +21,7 @@ export function test_list(list: List<number>): void {
     list.prepend(9);
 
     expect(list.get(2)).toEqual(5);
+    console.log("after2", list.getVals());
     expect(list.get(0)).toEqual(9);
     expect(list.remove(9)).toEqual(9);
     expect(list.length).toEqual(2);

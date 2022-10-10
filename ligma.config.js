@@ -1,18 +1,28 @@
-const DFAS = require("./utils");
+const {
+    LinearSearchList,
+    BinarySearchList,
+    SinglyLinkedList,
+    Stack,
+} = require("./utils");
 require("dotenv").config();
 
-const selectedSuite = [DFAS.ArrayList];
+const selectedSuite = [
+    LinearSearchList,
+    BinarySearchList,
+    SinglyLinkedList,
+    Stack,
+];
 const multiSuite = [
-    "DFSOnBST",
-    "LRU",
+    "SinglyLinkedList",
     "LinearSearchList",
     "BinarySearchList",
+    "Stack",
+    "DFSOnBST",
+    "LRU",
     "TwoCrystalBalls",
     "BubbleSort",
-    "SinglyLinkedList",
     "DoublyLinkedList",
     "Queue",
-    "Stack",
     "ArrayList",
     "MazeSolver",
     "QuickSort",
@@ -33,6 +43,7 @@ const lookupMap = {
     MULTI: multiSuite,
     DEFAULT: multiSuite,
 };
+
 const lookup = (mode, defaultChoice) => {
     const defaultChosen =
         defaultChoice !== null
