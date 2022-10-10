@@ -1,31 +1,41 @@
 ## Developed live on twitch
+
 [ThePrimeagen](https://twitch.tv/ThePrimeagen)
 
 ## Naming
+
 ### Lig-Machine
+
 Lengthy Instrumentation Generating Massive Anticompetitive Computational Help for Intermediate Coders // n9
 
 ### Ligmata
+
 Literal Improvement Gaining Master and Tutelage on Algorithms
 Let's Intelligently Generate Multiple Algorithm Training Assessments // permdaddy
 
 ### Sugma Nuts
+
 Studious Users Get Major Abilities. New Useful Training for Students
 
 ### Ligma Farts
+
 Learn Intermediate Groundbreaking Massive Algorithms. Free Algorithm Research & Training System
 
-
 ### If you have a suggestion
+
 make an issue and we will come up with the potential name.
 
 ### WARNING
+
 I have just started to add algorithms, so the number of supported algorithms is
 limited at the moment, but will grow fairly quick.
 
 ### WARNING
+
 OUT OF DATE.  We have quite a few more.  need to update
+
 ### Supported Algorithm
+
 * Insertion sort
 * Merge sort
 * QuickSort
@@ -33,6 +43,7 @@ OUT OF DATE.  We have quite a few more.  need to update
 * Dijkstra's Shortest Path (Adjacency List)
 
 ### Supported Data Structures
+
 * Singly linked list
 * Doubly linked list
 * Queue
@@ -50,20 +61,25 @@ clone the repo and install the dependencies
 yarn install
 ```
 
+create a .env file in root of kata-machine folder
+```sh
+MODE=SINGLE
+```
+
 edit the `ligma.config.js` file
 ```javascript
-module.exports = {
-    dsa: [
-        "InsertionSort",
-        "MergeSort",
-        "Queue",
-        "Stack",
-        "QuickSort",
-        "DijkstraList",
-        "PrimsList",
-    ],
-}
+const selectedSuite = [
+    DFAS.ArrayList
+    DFAS.InsertionSort,
+    DFAS.MergeSort,
+    DFAS.Queue,
+    DFAS.Stack,
+    DFAS.QuickSort,
+    DFAS.DijkstraList,
+    DFAS.PrimsList,
+];
 ```
+(by default it will use multiSuite)
 
 create a day of katas, this will use the list in the `ligma.config.js`.
 ```bash
@@ -81,8 +97,10 @@ src/day2
 `yarn generate` will also update the `tsconfig.json` and `jest.config` to point
 the latest `day` folder via tspaths.  This allows us to avoid updating anything
 for testing each day.
+`yarn clear` to delete day[%d] folders from src
 
 #### Testing
+
 ```
 yarn test
 ```
@@ -91,6 +109,7 @@ I have yet to create a testing strategy for next sets of algorithms, but we
 will get there when i cross that bridge.
 
 ### Help wanted
+
 A simple way to specify test, thinking something like `tests.json` and `cat
 test.json 2> /dev/null` to specify the tests to run.  tests.json wouldn't be
 committed.

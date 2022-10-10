@@ -12,12 +12,15 @@
         "baseUrl": "src",
         "paths": {
             "@code/*": [
-                "day2/*"
+                "day1/*"
             ]
-        }
+        },
+        "noErrorTruncation": true
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "./ligma.config.js",
+        "utils/index.ts"
     ],
     "exclude": [
         "node_modules"
