@@ -69,15 +69,7 @@ export default class SinglyLinkedList<T> {
         }
         return;
     }
-    getVals(): Array<T> {
-        let mem = this.head;
-        const vals = [];
-        while (mem) {
-            vals.push(mem.value);
-            mem = mem.next;
-        }
-        return vals;
-    }
+
     get(idx: number): WithUndef<T> {
         let counter = 0;
         let mem = this.head;

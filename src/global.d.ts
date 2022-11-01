@@ -17,7 +17,6 @@ declare interface List<T> {
     prepend(item: T): void;
     append(item: T): void;
     insertAt(item: T, idx: number): void;
-    getVals(): Array<T>;
 }
 
 declare type CompleteGraphEdge = { from: number; to: number; weight: number };

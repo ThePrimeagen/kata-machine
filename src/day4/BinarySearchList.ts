@@ -34,6 +34,7 @@ export default function bs_list(haystack: number[], needle: number): boolean {
         if (prevMidIdx === midIdx) {
             return haystack[startIdx] === needle || haystack[endIdx] === needle;
         }
+        console.log({ startIdx, endIdx, midIdx, needle });
     }
     return false;
 }
