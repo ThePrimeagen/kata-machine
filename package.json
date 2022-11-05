@@ -18,7 +18,8 @@
         "clear": "node ./scripts/clear.js",
         "prettier": "prettier --write ./src",
         "generate": "node ./scripts/generate.js",
-        "day": "echo src/day4"
+        "day": "echo src/day4",
+        "jest": "jest"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
