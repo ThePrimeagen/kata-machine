@@ -1,31 +1,57 @@
 const fs = require("fs");
 const path = require("path");
+const { idText, createUnparsedSourceFile } = require("typescript");
 const config = require("../ligma.config");
 const dsa = require("./dsa");
 
 const src_path = path.join(__dirname, "..", "src");
-let day = 1;
 
-try {
-    day = +fs.readdirSync(src_path).
-        filter(i => i.includes("day")).
-        sort((a, b) => {
-            return +b.substring(3) - a.substring(3);
-        })[0].substring(3) + 1;
+let day = userDefinedDay();
 
-    if (isNaN(day)) {
-        console.log("day is nan");
+function userDefinedDay() {
+    try {
+        const day = Math.abs(Math.floor(+process.argv[2]));
+        if (isNaN(day)) {
+            return 1;
+        }
+        console.log(day);
+        dayAlreadyExist = fs
+            .readdirSync(src_path)
+            .filter((i) => i.includes("day"))
+            .map((i) => +i.substring(3));
+        if (!dayAlreadyExist.includes(day)) return day;
+        return 0;
+    } catch (e) {
+        console.error("exeption!");
+        return 0;
+    }
+}
+
+if (day <= 0) {
+    try {
+        day =
+            +fs
+                .readdirSync(src_path)
+                .filter((i) => i.includes("day"))
+                .sort((a, b) => {
+                    return +b.substring(3) - a.substring(3);
+                })[0]
+                .substring(3) + 1;
+    } catch (e) {
+        console.error("exeption!");
         day = 1;
     }
-} catch (e) {
-    day = 1;
 }
 
 const day_name = `day${day}`;
 const day_path = path.join(src_path, day_name);
 const relative_day_path = path.relative(process.cwd(), day_path);
-try { fs.unlinkSync(day_path); } catch (e) { }
-try { fs.mkdirSync(day_path); } catch (e) { }
+try {
+    fs.unlinkSync(day_path);
+} catch (e) {}
+try {
+    fs.mkdirSync(day_path);
+} catch (e) {}
 
 function generate_method(method) {
     return `${method.name}(${method.args || ""}): ${method.return || "void"} {
@@ -34,17 +60,19 @@ function generate_method(method) {
 }
 
 function generate_property(prop) {
-    return `${prop.scope} ${prop.name}: ${prop.type};`
+    return `${prop.scope} ${prop.name}: ${prop.type};`;
 }
 
 function generate_getter(getter) {
     return `get ${getter.name}(): ${getter.return} {
     return this.${getter.prop_name};
-}`
+}`;
 }
 
 function create_class(name, item) {
-    fs.writeFileSync(path.join(day_path, `${name}.ts`), `export default class ${name}${item.generic || ""} {
+    fs.writeFileSync(
+        path.join(day_path, `${name}.ts`),
+        `export default class ${name}${item.generic || ""} {
     ${(item.properties || []).map(generate_property).join("\n    ")}
 
     ${(item.getters || []).map(generate_getter).join("\n    ")}
@@ -53,17 +81,21 @@ function create_class(name, item) {
     }
 
     ${(item.methods || []).map(generate_method).join("\n    ")}
-}`);
+}`,
+    );
 }
 
 function create_function(name, item) {
     const g = item.generic ? item.generic : "";
-    fs.writeFileSync(path.join(day_path, `${name}.ts`), `export default function ${item.fn}${g}(${item.args}): ${item.return} {
+    fs.writeFileSync(
+        path.join(day_path, `${name}.ts`),
+        `export default function ${item.fn}${g}(${item.args}): ${item.return} {
 
-}`);
+}`,
+    );
 }
 
-config.dsa.forEach(ds => {
+config.dsa.forEach((ds) => {
     const item = dsa[ds];
     if (!item) {
         throw new Error(`algorithm ${ds} could not be found`);
@@ -80,4 +112,3 @@ align.jest(day_name);
 align.ts_config(day_name);
 align.package_json(config, relative_day_path);
 align.stats(config, day_path);
-
