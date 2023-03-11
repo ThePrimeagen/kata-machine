@@ -1,12 +1,14 @@
 export default class SinglyLinkedList<T> {
     public length: number;
 
-    
 
-    constructor() {
+    constructor(item: T) {
+
+
     }
 
-    prepend(item: T): void {
+    prepend(): void {
+
 
 }
     insertAt(item: T, idx: number): void {
