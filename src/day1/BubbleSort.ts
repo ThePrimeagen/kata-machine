@@ -9,5 +9,5 @@ export default function bubble_sort(arr: number[]): number[] {
     }
     length--
   }
-  return [...arr]
+  return arr
 }
