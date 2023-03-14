@@ -12,7 +12,7 @@ test("two crystal balls", function () {
     expect(two_crystal_balls(new Array(821).fill(false))).toEqual(-1);
 
     // for testing exact sqrts
-    let sqrti = Math.floor(Math.random() * 100);
+    let sqrti = Math.floor(Math.random() * 99 + 1); // num > 0
     let dataSize = sqrti * sqrti;
     const sqrtsData = new Array(dataSize).fill(false);
     
@@ -21,6 +21,7 @@ test("two crystal balls", function () {
     }
 
     expect(two_crystal_balls(sqrtsData)).toEqual(sqrti);
+    expect(two_crystal_balls([]).toEqual(-1));
 
 });
 
