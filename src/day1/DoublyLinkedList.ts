@@ -107,7 +107,7 @@ export default class DoublyLinkedList<T> {
         const node = this.getAt(idx);
         if (!node) {
             return undefined;
-            
+
         }
 
     }
