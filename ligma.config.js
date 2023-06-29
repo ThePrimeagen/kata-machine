@@ -1,5 +1,6 @@
 module.exports = {
     dsa: [
+        "DijkstraList",
         "DFSOnBST",
         "LRU",
         "LinearSearchList",
@@ -25,5 +26,4 @@ module.exports = {
         "Map",
         "MinHeap",
     ],
-}
-
+};
