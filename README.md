@@ -1,3 +1,5 @@
+# ThePrimeagen's Algo Kata
+
 ## Developed live on twitch
 
 [ThePrimeagen](https://twitch.tv/ThePrimeagen)
@@ -30,9 +32,8 @@ make an issue and we will come up with the potential name.
 I have just started to add algorithms, so the number of supported algorithms is
 limited at the moment, but will grow fairly quick.
 
-### WARNING
-
-OUT OF DATE.  We have quite a few more.  need to update
+> [!alert]
+> OUT OF DATE.  We have quite a few more.  need to update
 
 ### Supported Algorithm
 
@@ -88,7 +89,7 @@ yarn generate
 
 this will progressively create folders named
 
-```
+```md
 src/day1
 src/day2
 ...
@@ -101,7 +102,7 @@ for testing each day.
 
 #### Testing
 
-```
+```sh
 yarn test
 ```
 
