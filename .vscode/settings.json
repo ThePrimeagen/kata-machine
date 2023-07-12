@@ -1,0 +1,8 @@
+{
+  "git-blame.gitWebUrl": "",
+  "spellright.ignoreFiles": [
+    "**/.gitignore",
+    "**/.spellignore",
+    "**/README.md"
+  ]
+}

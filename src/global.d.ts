@@ -1,13 +1,13 @@
 declare type Point = {
     x: number;
     y: number;
-}
+};
 
 declare type ListNode<T> = {
-    value: T,
-    next?: ListNode<T>,
-    prev?: ListNode<T>,
-}
+    value: T;
+    next?: ListNode<T>;
+    prev?: ListNode<T>;
+};
 
 declare interface List<T> {
     get length(): number;
@@ -17,6 +17,7 @@ declare interface List<T> {
     prepend(item: T): void;
     append(item: T): void;
     insertAt(item: T, idx: number): void;
+    getListNodeValues?: () => void;
 }
 
 declare type CompleteGraphEdge = { from: number; to: number; weight: number };
