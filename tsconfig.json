@@ -7,12 +7,12 @@
         "resolveJsonModule": true,
         "noImplicitReturns": true,
         "esModuleInterop": true,
-        "target": "es6",
+        "target": "esnext",
         "module": "commonjs",
         "baseUrl": "src",
         "paths": {
             "@code/*": [
-                "day2/*"
+                "day4/*"
             ]
         }
     },
