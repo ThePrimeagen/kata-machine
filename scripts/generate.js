@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const config = require("../ligma.config");
+const config = JSON.parse(fs.readFileSync("./ligma.config.json", "utf-8"));
 const dsa = require("./dsa");
 
 const src_path = path.join(__dirname, "..", "src");

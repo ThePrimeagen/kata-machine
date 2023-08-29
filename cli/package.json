@@ -1,0 +1,38 @@
+{
+    "name": "@primeagen/kata",
+    "version": "0.1.4",
+    "description": "Learn Intermediate Groundbreaking Massive Algorithms. Free Algorithm Research & Training System",
+    "keywords": [],
+    "author": "ThePrimeagen, oskr",
+    "license": "MIT",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ThePrimeagen/kata-machine.git",
+        "directory": "cli"
+    },
+    "exports": "./dist/index.js",
+    "bin": {
+        "@primeagen/kata": "./dist/index.js"
+    },
+    "engines": {
+        "node": ">=14.16"
+    },
+    "scripts": {
+        "build": "tsup index.ts  --format esm --clean",
+        "pub": "npm run build && npm publish --access public",
+        "pub:beta": "npm run build && npm publish --access public --tag beta",
+        "pub:next": "npm run build && npm publish --access public --tag next"
+    },
+    "devDependencies": {
+        "@types/inquirer": "^9.0.1",
+        "@types/node": "^18.7.18",
+        "tsup": "^6.2.3",
+        "typescript": "^4.8.3"
+    },
+    "dependencies": {
+        "degit": "^2.8.4",
+        "inquirer": "^9.1.1",
+        "ora": "^6.1.2"
+    }
+}

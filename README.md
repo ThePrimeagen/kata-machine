@@ -1,6 +1,12 @@
 ## Developed live on twitch
 [ThePrimeagen](https://twitch.tv/ThePrimeagen)
 
+## How to use
+
+* Run `npx @primeagen/kata` and select what you will be working on. A `kata` directory will be created.
+* If you want to add more, run `npx @primeagen/kata` again in the generated `kata` directory and it will generate a new day in `src`.
+
+
 ## Naming
 ### Lig-Machine
 Lengthy Instrumentation Generating Massive Anticompetitive Computational Help for Intermediate Coders // n9
