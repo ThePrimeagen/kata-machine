@@ -11,5 +11,6 @@ export default function bs_list(haystack: number[], needle: number): boolean {
       hi = m;
     } else lo = m + 1;
   } while (lo < hi);
-  return false;
+    return false;
+    //test github
 }
