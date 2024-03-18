@@ -20,7 +20,7 @@ test("Trie", function() {
         "foolish",
     ]);
     
-	trie.delete("foolish");
+    trie.delete("foolish");
 
     expect(trie.find("fo").sort()).toEqual([
         "foo"
