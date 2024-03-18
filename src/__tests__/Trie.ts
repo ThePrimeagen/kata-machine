@@ -19,5 +19,11 @@ test("Trie", function() {
         "foo",
         "foolish",
     ]);
+    
+    trie.delete("foolish");
+
+    expect(trie.find("fo").sort()).toEqual([
+        "foo"
+    ]);
 });
 
