@@ -1,7 +1,8 @@
+import { strictSimpleArray } from "../strict-array";
 import quick_sort from "@code/QuickSort";
 
 test("quick-sort", function () {
-    const arr = [9, 3, 7, 4, 69, 420, 42];
+    const arr = strictSimpleArray([9, 3, 7, 4, 69, 420, 42]);
 
     debugger;
     quick_sort(arr);
