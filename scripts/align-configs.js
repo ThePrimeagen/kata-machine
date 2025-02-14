@@ -25,7 +25,10 @@ module.exports.stats = function (config, day_path) {
 
 module.exports.package_json = function (config, day_path) {
   const package_json = require("../package.json");
-  package_json.scripts.test = `jest ${config.dsa.join(" ")}`;
+  const dsa = config.dsa.join(" ");
+  package_json.scripts.test = `jest ${dsa}`;
+  package_json.scripts["bunfun"] = `bun test ${dsa}`;
+  package_json.scripts["watchmybun"] = `bun test --watch ${dsa}`;
   package_json.scripts.day = `echo ${day_path}`;
 
   fs.writeFileSync(
