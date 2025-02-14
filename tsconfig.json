@@ -1,19 +1,25 @@
 {
-  "compilerOptions": {
-    "outDir": "dist",
-    "allowJs": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "resolveJsonModule": true,
-    "noImplicitReturns": true,
-    "esModuleInterop": true,
-    "target": "esnext",
-    "module": "commonjs",
-    "baseUrl": "src",
-    "paths": {
-      "@code/*": ["day4/*"]
-    }
-  },
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules"]
+    "compilerOptions": {
+        "outDir": "dist",
+        "allowJs": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "resolveJsonModule": true,
+        "noImplicitReturns": true,
+        "esModuleInterop": true,
+        "target": "esnext",
+        "module": "commonjs",
+        "baseUrl": "src",
+        "paths": {
+            "@code/*": [
+                "day2/*"
+            ]
+        }
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }
