@@ -1,5 +1,5 @@
 import LinkedList from "@code/DoublyLinkedList";
-import { test_list } from "./ListTest";
+import { test_list } from "./ListTest.test";
 
 test("DoublyLinkedList", function () {
   const list = new LinkedList<number>();
