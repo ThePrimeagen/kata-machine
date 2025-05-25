@@ -1,34 +1,34 @@
 {
-  "name": "kata",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "@types/jest": "^28.1.3",
-    "jest": "^28.1.1",
-    "prettier": "^2.7.1",
-    "ts-jest": "^28.0.5",
-    "ts-node": "^10.8.1",
-    "tsconfig-paths": "^4.0.0",
-    "tsconfig-paths-jest": "^0.0.1",
-    "typescript": "^4.7.4"
-  },
-  "scripts": {
-    "test": "jest BubbleSort ArrayList QuickSort",
-    "clear": "node ./scripts/clear.js",
-    "bun:clear": "bun ./scripts/clear.js",
-    "prettier": "prettier --write ./src",
-    "generate": "node ./scripts/generate.js",
-    "bun:generate": "bun ./scripts/generate.js",
-    "day": "echo src/day2",
-    "bunfun": "bun test BubbleSort ArrayList QuickSort",
-    "watchmybun": "bun test --watch BubbleSort ArrayList QuickSort"
-  },
-  "devDependencies": {
-    "@swc-node/register": "^1.6.7",
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+    "name": "kata",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "@types/jest": "^28.1.3",
+        "jest": "^28.1.1",
+        "prettier": "^2.7.1",
+        "ts-jest": "^28.0.5",
+        "ts-node": "^10.8.1",
+        "tsconfig-paths": "^4.0.0",
+        "tsconfig-paths-jest": "^0.0.1",
+        "typescript": "^4.7.4"
+    },
+    "scripts": {
+        "test": "jest DFSOnBST LRU LinearSearchList BinarySearchList TwoCrystalBalls BubbleSort SinglyLinkedList DoublyLinkedList Queue Stack ArrayList MazeSolver QuickSort BTPreOrder BTInOrder BTPostOrder BTBFS CompareBinaryTrees DFSOnBST DFSGraphList Trie BFSGraphMatrix Map MinHeap",
+        "clear": "node ./scripts/clear.js",
+        "bun:clear": "bun ./scripts/clear.js",
+        "prettier": "prettier --write ./src",
+        "generate": "node ./scripts/generate.js",
+        "bun:generate": "bun ./scripts/generate.js",
+        "day": "echo src/day1",
+        "bunfun": "bun test DFSOnBST LRU LinearSearchList BinarySearchList TwoCrystalBalls BubbleSort SinglyLinkedList DoublyLinkedList Queue Stack ArrayList MazeSolver QuickSort BTPreOrder BTInOrder BTPostOrder BTBFS CompareBinaryTrees DFSOnBST DFSGraphList Trie BFSGraphMatrix Map MinHeap",
+        "watchmybun": "bun test --watch DFSOnBST LRU LinearSearchList BinarySearchList TwoCrystalBalls BubbleSort SinglyLinkedList DoublyLinkedList Queue Stack ArrayList MazeSolver QuickSort BTPreOrder BTInOrder BTPostOrder BTBFS CompareBinaryTrees DFSOnBST DFSGraphList Trie BFSGraphMatrix Map MinHeap"
+    },
+    "devDependencies": {
+        "@swc-node/register": "^1.6.7",
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    }
 }
