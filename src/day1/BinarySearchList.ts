@@ -4,7 +4,7 @@ export default function bs_list(haystack: number[], needle: number): boolean {
     let mid;
     let value;
 
-    while (low <= high) {
+    do {
         mid = Math.floor((low + high) / 2);
         value = haystack[mid];
 
@@ -17,7 +17,8 @@ export default function bs_list(haystack: number[], needle: number): boolean {
         } else {
             low = mid + 1;
         }
-    }
+
+    } while (low <= high);
 
     return false;
 }
