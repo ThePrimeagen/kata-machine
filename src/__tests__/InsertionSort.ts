@@ -7,3 +7,7 @@ test("insertion-sort", function () {
     insertion_sort(arr);
     expect(arr).toEqual([3, 4, 7, 9, 42, 69, 420]);
 });
+
+function expect(arr: number[]) {
+    throw new Error("Function not implemented.");
+}
